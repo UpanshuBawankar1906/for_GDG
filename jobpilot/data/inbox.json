@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "date": "2026-10-01",
+    "from": "careers@zentech.in",
+    "subject": "Application received: Backend Engineer",
+    "body": "Hi, thank you for applying to the Backend Engineer role at ZenTech. We have received your application and our team will review it shortly. We will be in touch if your profile matches our requirements."
+  },
+  {
+    "id": 2,
+    "date": "2026-10-02",
+    "from": "noreply@razorpay.com",
+    "subject": "Your application to Razorpay - SDE II",
+    "body": "Dear candidate, we have received your application for the Software Development Engineer II position at Razorpay. Our recruiting team will review your profile and reach out within 2 weeks if there is a match."
+  },
+  {
+    "id": 3,
+    "date": "2026-10-03",
+    "from": "hr.infosys.jobs@gmail.com",
+    "subject": "Offer letter - pay Rs 4,999 training fee",
+    "body": "Congratulations! You are selected for the Software Engineer role at Infosys. Please pay the refundable training fee of Rs 4,999 via UPI to confirm your joining. Also send your Aadhaar card and PAN card to this email for verification. Offer letter will be sent after payment."
+  },
+  {
+    "id": 4,
+    "date": "2026-10-04",
+    "from": "talent@finly.co",
+    "subject": "Interview invite: Round 1 on 27 Oct",
+    "body": "Hi! We reviewed your profile and would love to move forward with a technical interview. Please pick a 45-minute slot on Oct 27th using the link below. The interview will be conducted by our senior engineering team."
+  },
+  {
+    "id": 5,
+    "date": "2026-10-05",
+    "from": "recruiting@swiggy.com",
+    "subject": "Update on your application - Backend Engineer",
+    "body": "Hi, thank you for your interest in the Backend Engineer role at Swiggy. After careful review, we have decided to move forward with other candidates whose experience more closely aligns with our current requirements. We encourage you to apply again in the future."
+  },
+  {
+    "id": 6,
+    "date": "2026-10-06",
+    "from": "jobs.tcs.hr.verify@gmail.com",
+    "subject": "TCS selected you - send documents for joining",
+    "body": "Dear applicant, TCS HR team has shortlisted your profile. To proceed with the joining formalities, please send your Aadhaar, PAN, and bank account details to complete the background verification. Also a refundable security deposit of Rs 2,500 is required. Reply urgently."
+  },
+  {
+    "id": 7,
+    "date": "2026-10-07",
+    "from": "careers@groww.in",
+    "subject": "Application acknowledged - Product Engineer",
+    "body": "Thanks for applying to the Product Engineer opening at Groww. We appreciate your interest and will review your application carefully. Expect to hear back from us within 10 business days."
+  },
+  {
+    "id": 8,
+    "date": "2026-10-08",
+    "from": "hiring@zepto.com",
+    "subject": "Technical interview scheduled - Oct 30",
+    "body": "Hi, we are pleased to invite you for a technical interview for the Senior Backend Engineer role at Zepto. The interview is scheduled for October 30th at 11am IST via Google Meet. Please confirm your availability by replying to this email."
+  },
+  {
+    "id": 9,
+    "date": "2026-10-09",
+    "from": "no-reply@amazon.jobs",
+    "subject": "Amazon - Application status update",
+    "body": "Thank you for applying for the Software Development Engineer position at Amazon. We have reviewed your application and will not be moving forward with your candidacy at this time. We will keep your resume on file for future opportunities."
+  },
+  {
+    "id": 10,
+    "date": "2026-10-10",
+    "from": "wfh.jobs.online99@gmail.com",
+    "subject": "Work from home job - earn Rs 50,000/month, no experience needed",
+    "body": "Dear candidate, we have an urgent opening for a data entry work from home job. Earn Rs 50,000 per month working just 2 hours a day. No experience required. Registration fee of Rs 999 only. Send your details and payment screenshot to confirm. Limited seats available. Reply NOW."
+  },
+  {
+    "id": 11,
+    "date": "2026-10-11",
+    "from": "hr@meesho.com",
+    "subject": "Offer letter: Product Manager - Meesho",
+    "body": "Dear candidate, we are delighted to extend an offer for the Product Manager role at Meesho. Your CTC will be Rs 28 LPA. Please find the formal offer letter attached. Kindly sign and return it within 3 business days. Your joining date is November 15, 2026."
+  },
+  {
+    "id": 12,
+    "date": "2026-10-12",
+    "from": "careers@phonepe.com",
+    "subject": "PhonePe - Regret for SDE-2 application",
+    "body": "Hi, thank you for taking the time to apply and interview with PhonePe for the SDE-2 role. After thorough evaluation, we have decided to proceed with another candidate. We were impressed with your skills and encourage you to apply for future openings."
+  },
+  {
+    "id": 13,
+    "date": "2026-10-13",
+    "from": "internship.stipend.apply@gmail.com",
+    "subject": "Internship with Rs 45,000 stipend - apply now",
+    "body": "Congratulations! Your profile has been selected for a premium internship with a top MNC. Monthly stipend Rs 45,000. To confirm your seat, pay a one-time registration amount of Rs 1,499 and submit your Aadhaar and photo. Offer expires in 24 hours."
+  },
+  {
+    "id": 14,
+    "date": "2026-10-14",
+    "from": "tech-recruiting@cred.club",
+    "subject": "CRED - Moving forward: Round 2 interview",
+    "body": "Hi! Great performance in Round 1. We would like to invite you to Round 2, which will be a system design interview with our principal engineers. Please let us know your availability between Oct 28-31. Duration is approximately 90 minutes."
+  },
+  {
+    "id": 15,
+    "date": "2026-10-15",
+    "from": "noreply@flipkart.com",
+    "subject": "Application update - SDE III Flipkart",
+    "body": "Thank you for applying to the SDE III position at Flipkart. We have reviewed your profile and unfortunately, we will not be moving ahead with your application at this time. Thank you for your interest in Flipkart."
+  },
+  {
+    "id": 16,
+    "date": "2026-10-16",
+    "from": "apply.mnc.hr2026@gmail.com",
+    "subject": "Job offer from MNC - salary 8 LPA - pay verification fee",
+    "body": "You have been selected for a job at a leading MNC with salary 8 LPA. To release your offer letter, you need to pay a refundable verification fee of Rs 3,000. Send payment to UPI ID given below and share screenshot. Joining in 15 days. Do not miss this opportunity."
+  },
+  {
+    "id": 17,
+    "date": "2026-10-17",
+    "from": "careers@atlassian.com",
+    "subject": "Application received - Software Engineer, Atlassian",
+    "body": "Hi, thank you for your application to the Software Engineer role at Atlassian Bangalore. We will review your application and our talent team will reach out if we find a strong match for the role. The process typically takes 2-3 weeks."
+  },
+  {
+    "id": 18,
+    "date": "2026-10-18",
+    "from": "talent@finly.co",
+    "subject": "Final round interview - Oct 31",
+    "body": "Hi, congratulations on passing Round 1! We would like to invite you for the final round interview on October 31st. This will be a 60-minute culture fit and leadership discussion with our CTO. Please confirm your slot."
+  },
+  {
+    "id": 19,
+    "date": "2026-10-19",
+    "from": "hr@browserstack.com",
+    "subject": "BrowserStack - Application acknowledged",
+    "body": "Thank you for applying to the Senior Software Engineer role at BrowserStack. Your application is under review. Our team will contact you within the next 5-7 business days if your profile is shortlisted."
+  },
+  {
+    "id": 20,
+    "date": "2026-10-20",
+    "from": "urgent.job.offer.2026@gmail.com",
+    "subject": "Urgent: Your resume shortlisted - send Aadhaar immediately",
+    "body": "Dear job seeker, your CV has been shortlisted by our client company. This is an urgent requirement. Please send your Aadhaar card, PAN card, and bank passbook copy to this email within 2 hours to proceed. Salary: 12 LPA. Work from office Bangalore. Do not delay."
+  }
+]
