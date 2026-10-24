@@ -26,7 +26,7 @@ export default function StatsBar({ stats }) {
             {stats[s.key] ?? 0}
           </div>
           {stats.total > 0 && (
-            <div style={{ fontSize: 10, color: '#94a3b8' }}>
+            <div style={{ fontSize: 10, color: '#64748b' }}>
               {Math.round(((stats[s.key] ?? 0) / stats.total) * 100)}% of {stats.total}
             </div>
           )}

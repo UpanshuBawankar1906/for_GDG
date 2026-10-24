@@ -12,15 +12,21 @@ function download(filename, text, mime) {
   URL.revokeObjectURL(url)
 }
 
-const csvCell = (v) => {
-  const s = Array.isArray(v) ? v.join('; ') : (v ?? '')
-  return `"${String(s).replace(/"/g, '""')}"`
+// Prefix cells that spreadsheets would treat as formulas (CSV injection).
+export const csvCell = (v) => {
+  let s = String(Array.isArray(v) ? v.join('; ') : (v ?? ''))
+  if (/^[=+\-@\t\r]/.test(s)) s = `'${s}`
+  return `"${s.replace(/"/g, '""')}"`
+}
+
+export function buildCSV(classified) {
+  const rows = [FIELDS.join(',')]
+  classified.forEach(e => rows.push(FIELDS.map(f => csvCell(e[f])).join(',')))
+  return rows.join('\n')
 }
 
 export function exportCSV(classified) {
-  const rows = [FIELDS.join(',')]
-  classified.forEach(e => rows.push(FIELDS.map(f => csvCell(e[f])).join(',')))
-  download('jobpilot-tracker.csv', rows.join('\n'), 'text/csv;charset=utf-8')
+  download('jobpilot-tracker.csv', buildCSV(classified), 'text/csv;charset=utf-8')
 }
 
 export function exportJSON(classified) {

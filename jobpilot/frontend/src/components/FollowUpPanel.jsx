@@ -47,7 +47,7 @@ export default function FollowUpPanel({ followups }) {
               <div style={{ fontSize: 12, color: '#64748b', marginTop: 1 }}>
                 {email.role || email.subject}
               </div>
-              <div style={{ fontSize: 11, color: '#94a3b8', marginTop: 3 }}>
+              <div style={{ fontSize: 11, color: '#64748b', marginTop: 3 }}>
                 Applied {email.date} · From: {email.from}
               </div>
             </div>
@@ -62,7 +62,7 @@ export default function FollowUpPanel({ followups }) {
                   ? '⏰ Due today'
                   : `⏰ ${email.days_overdue}d overdue`}
               </div>
-              <div style={{ fontSize: 11, color: '#94a3b8' }}>
+              <div style={{ fontSize: 11, color: '#64748b' }}>
                 Follow-up due: {email.follow_up_due}
               </div>
             </div>

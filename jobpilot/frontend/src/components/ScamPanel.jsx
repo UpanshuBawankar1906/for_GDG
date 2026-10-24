@@ -69,7 +69,7 @@ export default function ScamPanel({ scams }) {
               {/* Red flags */}
               {email.scam_reasons?.length > 0 && (
                 <div>
-                  <div style={{ fontSize: 11, fontWeight: 700, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: 6 }}>
+                  <div style={{ fontSize: 11, fontWeight: 700, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: 6 }}>
                     Red flags identified
                   </div>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
@@ -86,7 +86,7 @@ export default function ScamPanel({ scams }) {
 
               {/* Email body preview */}
               <details style={{ marginTop: 10 }}>
-                <summary style={{ fontSize: 11, color: '#94a3b8', cursor: 'pointer', userSelect: 'none' }}>
+                <summary style={{ fontSize: 11, color: '#64748b', cursor: 'pointer', userSelect: 'none' }}>
                   Show email body
                 </summary>
                 <div style={{

@@ -1,25 +1,16 @@
 import { useState } from 'react'
 import JobPilotBot from './JobPilotBot.jsx'
+import sampleInbox from '../sampleInbox.json'
 
-const SAMPLE_INBOX_URL = '/api/sample-inbox'
 
 export default function InboxLoader({ onClassify, error }) {
   const [jsonText, setJsonText]   = useState('')
   const [parseErr, setParseErr]   = useState(null)
   const [loadingSample, setLoadingSample] = useState(false)
 
-  const handleLoadSample = async () => {
-    setLoadingSample(true)
-    try {
-      const res  = await fetch(SAMPLE_INBOX_URL)
-      const data = await res.json()
-      setJsonText(JSON.stringify(data, null, 2))
-      setParseErr(null)
-    } catch (e) {
-      setParseErr('Could not load sample inbox: ' + e.message)
-    } finally {
-      setLoadingSample(false)
-    }
+  const handleLoadSample = () => {
+    setJsonText(JSON.stringify(sampleInbox, null, 2))
+    setParseErr(null)
   }
 
   const handleRun = () => {
@@ -81,7 +72,7 @@ export default function InboxLoader({ onClassify, error }) {
               fontSize: 12, fontWeight: 600, color: '#475569',
             }}>
               📎 Upload .json
-              <input type="file" accept=".json" onChange={handleFile} style={{ display: 'none' }} />
+              <input type="file" accept=".json" aria-label="Upload inbox JSON file" onChange={handleFile} style={{ display: 'none' }} />
             </label>
             <button onClick={handleLoadSample} disabled={loadingSample} style={{
               padding: '5px 12px', borderRadius: 8,
@@ -95,6 +86,7 @@ export default function InboxLoader({ onClassify, error }) {
 
         {/* Textarea */}
         <textarea
+          aria-label="Inbox JSON"
           value={jsonText}
           onChange={e => { setJsonText(e.target.value); setParseErr(null) }}
           placeholder='[\n  { "id": 1, "date": "2026-10-10", "from": "...", "subject": "...", "body": "..." },\n  ...\n]'
@@ -113,7 +105,7 @@ export default function InboxLoader({ onClassify, error }) {
           display: 'flex', alignItems: 'center', justifyContent: 'space-between',
           background: '#f8fafc',
         }}>
-          <div style={{ fontSize: 12, color: '#94a3b8' }}>
+          <div style={{ fontSize: 12, color: '#64748b' }}>
             {jsonText ? (() => {
               try { const a = JSON.parse(jsonText); return `${a.length} email${a.length !== 1 ? 's' : ''} loaded` }
               catch { return '' }
@@ -125,7 +117,7 @@ export default function InboxLoader({ onClassify, error }) {
             style={{
               padding: '8px 22px', borderRadius: 10, border: 'none',
               background: jsonText.trim() ? 'linear-gradient(135deg,#3b82f6,#6366f1)' : '#e2e8f0',
-              color: jsonText.trim() ? 'white' : '#94a3b8',
+              color: jsonText.trim() ? 'white' : '#64748b',
               fontSize: 13, fontWeight: 700, cursor: jsonText.trim() ? 'pointer' : 'not-allowed',
               transition: 'all 0.15s',
             }}
@@ -137,7 +129,7 @@ export default function InboxLoader({ onClassify, error }) {
 
       {/* Error messages */}
       {(parseErr || error) && (
-        <div style={{
+        <div role="alert" style={{
           marginTop: 12, padding: '10px 16px', borderRadius: 10,
           background: '#fef2f2', border: '1px solid #fecaca',
           fontSize: 12, color: '#dc2626', fontWeight: 600,

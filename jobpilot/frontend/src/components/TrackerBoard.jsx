@@ -2,7 +2,7 @@ const COLUMNS = [
   { id: 'applied',   label: 'Applied',   color: '#3b82f6', bg: '#eff6ff', border: '#bfdbfe', icon: '📤' },
   { id: 'interview', label: 'Interview', color: '#8b5cf6', bg: '#f5f3ff', border: '#ddd6fe', icon: '🎯' },
   { id: 'offer',     label: 'Offer',     color: '#10b981', bg: '#f0fdf4', border: '#bbf7d0', icon: '🎉' },
-  { id: 'rejected',  label: 'Rejected',  color: '#94a3b8', bg: '#f8fafc', border: '#e2e8f0', icon: '❌' },
+  { id: 'rejected',  label: 'Rejected',  color: '#64748b', bg: '#f8fafc', border: '#e2e8f0', icon: '❌' },
   { id: 'scam',      label: 'Scam',      color: '#ef4444', bg: '#fef2f2', border: '#fecaca', icon: '🚨' },
 ]
 
@@ -56,7 +56,7 @@ function EmailCard({ email }) {
       )}
 
       {/* Date + from */}
-      <div style={{ marginTop: 8, display: 'flex', justifyContent: 'space-between', fontSize: 10, color: '#94a3b8' }}>
+      <div style={{ marginTop: 8, display: 'flex', justifyContent: 'space-between', fontSize: 10, color: '#64748b' }}>
         <span>{email.from}</span>
         <span>{email.date}</span>
       </div>
@@ -94,7 +94,7 @@ export default function TrackerBoard({ emails }) {
             {grouped[col.id].length === 0 ? (
               <div style={{
                 textAlign: 'center', padding: '24px 0',
-                fontSize: 11, color: '#cbd5e1', fontStyle: 'italic',
+                fontSize: 11, color: '#64748b', fontStyle: 'italic',
               }}>No emails</div>
             ) : (
               grouped[col.id].map(email => (

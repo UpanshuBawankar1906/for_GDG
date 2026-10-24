@@ -5,6 +5,7 @@ import ScamPanel from './components/ScamPanel.jsx'
 import FollowUpPanel from './components/FollowUpPanel.jsx'
 import StatsBar from './components/StatsBar.jsx'
 import { exportCSV, exportJSON } from './exportData.js'
+import { classifyInbox } from './classifier.js'
 
 export default function App() {
   const [result, setResult]     = useState(null)   // { classified, scams, followups, stats }
@@ -16,13 +17,7 @@ export default function App() {
     setLoading(true)
     setError(null)
     try {
-      const res = await fetch('/api/classify', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ emails }),
-      })
-      if (!res.ok) throw new Error(`Server error ${res.status}`)
-      const data = await res.json()
+      const data = await classifyInbox(emails)
       setResult(data)
       setActiveTab('tracker')
     } catch (e) {
@@ -56,7 +51,7 @@ export default function App() {
           <span style={{ fontSize: 17, fontWeight: 700, color: '#0f172a', letterSpacing: '-0.3px' }}>
             Job<span style={{ color: '#3b82f6' }}>Pilot</span>
           </span>
-          <span style={{ fontSize: 11, color: '#94a3b8' }}>AI Job Hunt Autopilot</span>
+          <span style={{ fontSize: 11, color: '#64748b' }}>AI Job Hunt Autopilot</span>
         </div>
 
         {/* Tabs — only when results are loaded */}
@@ -119,14 +114,14 @@ export default function App() {
       </header>
 
       {/* ── Main content ── */}
-      <main style={{ maxWidth: 1200, margin: '0 auto', padding: '24px 16px' }}>
+      <main id="main" style={{ maxWidth: 1200, margin: '0 auto', padding: '24px 16px' }}>
 
         {!result && !loading && (
           <InboxLoader onClassify={handleClassify} error={error} />
         )}
 
         {loading && (
-          <div style={{
+          <div role="status" aria-live="polite" style={{
             display: 'flex', flexDirection: 'column', alignItems: 'center',
             justifyContent: 'center', minHeight: 360, gap: 16,
           }}>
@@ -141,7 +136,7 @@ export default function App() {
             <div style={{ fontSize: 14, color: '#64748b', fontWeight: 600 }}>
               Analysing inbox with Gemini AI…
             </div>
-            <div style={{ fontSize: 12, color: '#94a3b8' }}>
+            <div style={{ fontSize: 12, color: '#64748b' }}>
               Classifying each email — detecting scams, interviews & follow-ups
             </div>
             <style>{`
